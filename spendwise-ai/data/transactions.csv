@@ -1,0 +1,11 @@
+date,description,category,amount,type
+2025-10-01,Salary,Income,5000.00,entry
+2025-10-02,Rent,Housing,1200.00,expense
+2025-10-03,Supermarket,Food,450.00,expense
+2025-10-05,Netflix,Entertainment,55.90,expense
+2025-10-07,Pharmacy,Health,89.00,expense
+2025-10-10,Restaurant,Food,120.00,expense
+2025-10-12,Uber,Transportation,45.00,expense
+2025-10-15,Electricity Bill,Housing,180.00,expense
+2025-10-20,Gym,Health,99.00,expense
+2025-10-25,Fuel,Transportation,250.00,expense
