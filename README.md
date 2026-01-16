@@ -43,9 +43,6 @@ All insights are based solely on the provided dataset.
 ```
 spendwise-ai/
 │
-├── app.py
-├── README.md
-├── requirements.txt
 ├── data/
 │   └── transactions.csv
 └── docs/
@@ -54,6 +51,13 @@ spendwise-ai/
     ├── 03-prompts.md
     ├── 04-metrics.md
     └── 05-pitch.md
+├── images/
+    ├── current-balance.png
+    ├── highest-expense.png
+    ├── total-expenses.png
+├── app.py
+├── README.md
+├── requirements.txt
 ```
 
 ---
