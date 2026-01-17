@@ -2,24 +2,24 @@
 
 ## 1. Agent Overview
 
-**SpendWise AI** is an intelligent financial assistant designed to help users understand, analyze, and optimize their personal spending habits. The agent focuses on transaction-level analysis, identifying patterns, trends, and opportunities for better financial decisions based on historical data.
+**SpendWise AI** is an intelligent personal finance analysis assistant designed to help users understand their **income, expenses, and financial balance**. The agent focuses on transaction-level analysis, identifying spending patterns and providing clear, data-backed insights based on historical data.
 
-The agent does **not** provide financial investment advice, credit approval decisions, or personalized legal or tax recommendations.
+The agent does **not** provide investment advice, credit approval decisions, or personalized legal or tax recommendations.
 
 ---
 
 ## 2. Problem Statement
 
-Many individuals struggle to understand where their money is going on a daily basis. Raw transaction data is often difficult to interpret, leading to poor budgeting decisions, lack of spending awareness, and financial stress.
+Many individuals struggle to understand where their money is going on a daily basis. Raw financial transaction data is often difficult to interpret, leading to poor budgeting decisions, lack of spending awareness, and financial stress.
 
-Users typically face challenges such as:
+Users commonly face challenges such as:
 
-* Difficulty identifying high-spending categories
-* Lack of visibility into recurring expenses
-* No clear insights into spending behavior over time
-* Inability to translate data into actionable insights
+- Difficulty identifying high-spending categories
+- Limited visibility into income versus expenses
+- Lack of clarity about overall financial balance
+- Difficulty translating raw data into meaningful insights
 
-SpendWise AI addresses these issues by transforming transaction data into clear, actionable insights.
+SpendWise AI addresses these issues by transforming structured transaction data into clear and explainable financial summaries.
 
 ---
 
@@ -27,10 +27,10 @@ SpendWise AI addresses these issues by transforming transaction data into clear,
 
 The primary users of SpendWise AI are:
 
-* Individuals seeking better control over their personal finances
-* Users interested in understanding spending patterns
-* Beginners in financial planning
-* Users who want data-driven insights without complex tools
+- Individuals seeking better control over their personal finances
+- Users interested in understanding income and expense patterns
+- Beginners in personal finance and budgeting
+- Users who want data-driven insights without complex financial tools
 
 The agent is designed for non-technical users with basic financial literacy.
 
@@ -40,65 +40,69 @@ The agent is designed for non-technical users with basic financial literacy.
 
 SpendWise AI is capable of:
 
-* Analyzing transaction history
-* Identifying top spending categories
-* Detecting recurring expenses
-* Summarizing spending trends over time
-* Answering questions based strictly on available data
+- Analyzing transaction history
+- Separating income and expense records
+- Calculating total income, total expenses, and balance
+- Identifying top expense categories
+- Answering user questions strictly based on available data
 
 ### Out of Scope (Explicit Limitations)
 
-* Investment recommendations
-* Credit scoring or loan decisions
-* Predictive financial forecasting
-* Personalized tax or legal advice
+- Investment recommendations
+- Credit scoring or loan decisions
+- Predictive financial forecasting
+- Personalized tax or legal advice
 
 ---
 
 ## 5. Data Sources
 
-The agent uses structured mock data provided in the project repository, including:
+The agent operates on a **single structured dataset** provided in the project repository:
 
-* **transactions.csv**: Detailed user transaction history
-* **historico_atendimento.csv**: Past customer service interactions (contextual only)
-* **perfil_investidor.json**: User profile data (high-level context)
-* **produtos_financeiros.json**: Financial products reference (informational)
+- **transactions.csv**: Mock personal finance transaction history
 
-The agent only provides answers grounded in these data sources.
+The dataset includes the following fields:
+- `date`
+- `description`
+- `category`
+- `amount`
+- `type` (income or expense)
+
+The agent only provides responses grounded in this dataset and does not query external data sources.
 
 ---
 
 ## 6. Agent Architecture (High-Level)
 
-1. User submits a natural language query
-2. The system interprets user intent
-3. Relevant data is retrieved from structured datasets
-4. The agent generates a response based on data-backed insights
-5. Responses are delivered in clear, user-friendly language
+1. The user submits a natural language query
+2. The system interprets the user intent
+3. Relevant records are retrieved from `transactions.csv`
+4. Calculations and aggregations are performed
+5. A clear, data-backed response is generated
 
-No external data sources are queried during execution.
+No external APIs or databases are accessed during execution.
 
 ---
 
 ## 7. Hallucination Prevention Strategy
 
-To prevent hallucinations and unreliable responses, SpendWise AI:
+To prevent hallucinations and unreliable outputs, SpendWise AI:
 
-* Restricts answers to known data sources
-* Explicitly states when information is unavailable
-* Avoids assumptions beyond the dataset
-* Uses conservative language when data is incomplete
+- Restricts responses strictly to the dataset
+- Clearly states when information is unavailable
+- Avoids assumptions beyond the data
+- Uses conservative and explainable language
 
-If a question cannot be answered using the available data, the agent responds with a clear limitation notice.
+If a question cannot be answered using the available data, the agent responds with a transparent limitation notice.
 
 ---
 
 ## 8. Language and Tone
 
-* Professional and friendly
-* Clear and concise explanations
-* Data-driven responses
-* Neutral and informative tone
+- Professional and friendly
+- Clear and concise explanations
+- Data-driven and transparent responses
+- Neutral and informative tone
 
 The agent responds in the same language used by the user whenever possible.
 
@@ -108,10 +112,10 @@ The agent responds in the same language used by the user whenever possible.
 
 SpendWise AI is considered successful if it:
 
-* Provides accurate spending insights
-* Avoids unsupported assumptions
-* Improves user understanding of spending behavior
-* Maintains transparency about data limitations
+- Provides accurate income and expense insights
+- Maintains consistency between data, code, and documentation
+- Avoids unsupported assumptions
+- Improves user understanding of personal financial behavior
 
 ---
 
@@ -119,10 +123,10 @@ SpendWise AI is considered successful if it:
 
 Potential future enhancements include:
 
-* Visual dashboards
-* Category-level anomaly detection
-* Budget goal tracking
-* Multi-user support
+- Interactive visual dashboards
+- Time-based filtering
+- Budget tracking features
+- Multi-user support
 
 ---
 
