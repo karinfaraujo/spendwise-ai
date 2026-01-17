@@ -1,40 +1,42 @@
 # 💰 SpendWise AI
 
-SpendWise AI is a data-driven personal finance analysis assistant designed to help users understand their **income, expenses, and balance** through clear, transparent, and reliable insights.
+**SpendWise AI** is a data-driven personal finance analysis assistant designed to help users understand their **income, expenses, and financial balance** through clear, transparent, and reliable insights.
 
-This project demonstrates how generative AI concepts can be applied responsibly in personal finance by enforcing strict data boundaries and avoiding unsupported assumptions.
+This project demonstrates how generative AI concepts can be applied responsibly in personal finance by enforcing **strict data boundaries**, **clear scope definition**, and **low hallucination risk**.
 
 ---
 
 ## 🚀 Project Overview
 
-Many individuals have access to financial transaction data but struggle to extract meaningful insights from it. SpendWise AI transforms raw income and expense data into understandable summaries, helping users gain visibility into their financial behavior.
+Many individuals have access to financial transaction data but struggle to extract meaningful insights from it.  
+SpendWise AI transforms raw income and expense records into understandable summaries, helping users gain visibility into their financial behavior.
 
-The agent focuses exclusively on **descriptive financial analysis**, ensuring that all responses are grounded in the available dataset.
+The agent focuses exclusively on **descriptive financial analysis**, ensuring that all responses are fully grounded in the available dataset.
 
 ---
 
 ## 🎯 Key Features
 
-- Income and expense tracking  
-- Balance calculation  
-- Spending analysis by category  
-- Identification of highest expense categories  
-- Clear and user-friendly explanations  
-- Explicit handling of data limitations  
-- Low hallucination risk through strict scope control  
+- Income and expense tracking
+- Financial balance calculation
+- Spending analysis by category
+- Identification of highest expense categories
+- Clear and user-friendly explanations
+- Explicit handling of data limitations
+- Low hallucination risk through strict scope control
 
 ---
 
 ## 🧠 Agent Scope and Limitations
 
-SpendWise AI **does not** provide:
-- Investment recommendations  
-- Credit scoring or loan decisions  
-- Financial predictions or forecasts  
-- Legal, tax, or accounting advice  
+SpendWise AI does **not** provide:
 
-All insights are based solely on the provided dataset.
+- Investment recommendations
+- Credit scoring or loan decisions
+- Financial predictions or forecasts
+- Legal, tax, or accounting advice
+
+All insights are generated **strictly from the provided dataset**.
 
 ---
 
@@ -58,7 +60,6 @@ spendwise-ai/
 ├── app.py
 ├── README.md
 ├── requirements.txt
-
 ```
 
 ---
@@ -122,4 +123,3 @@ All design decisions, documentation, and implementation were independently devel
 
 **Karin Araujo**  
 Aspiring Data Analyst  
-
