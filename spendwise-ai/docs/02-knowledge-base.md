@@ -2,9 +2,9 @@
 
 ## 1. Overview
 
-This document describes the knowledge base used by **SpendWise AI**. The agent relies exclusively on structured, pre-defined datasets to generate insights and answer user questions related to personal spending behavior.
+This document describes the knowledge base used by **SpendWise AI**. The agent relies exclusively on a **single structured dataset** to generate insights and answer user questions related to personal finance behavior, including income, expenses, and balance.
 
-All responses produced by the agent must be grounded in the data sources described below.
+All responses produced by the agent are strictly grounded in the dataset described below.
 
 ---
 
@@ -12,105 +12,48 @@ All responses produced by the agent must be grounded in the data sources describ
 
 The knowledge base supports the following types of analysis:
 
-* Transaction-level spending analysis
-* Category-based expense aggregation
-* Temporal spending trends
-* Identification of recurring expenses
+- Transaction-level financial analysis
+- Income and expense aggregation
+- Balance calculation (income minus expenses)
+- Category-based expense analysis
 
-The knowledge base does **not** support predictive modeling, investment advice, or external financial data enrichment.
+The knowledge base does **not** support predictive modeling, investment advice, budgeting recommendations, or external financial data enrichment.
 
 ---
 
-## 3. Data Sources Description
+## 3. Data Source Description
 
 ### 3.1 transactions.csv
 
-**Description:**
-Contains detailed records of user financial transactions.
+**Description:**  
+Contains mock records of personal financial transactions used for educational and analytical purposes.
 
 **Key Fields:**
 
-* `transaction_id`: Unique identifier of the transaction
-* `date`: Transaction date
-* `amount`: Transaction value
-* `category`: Expense category (e.g., Food, Transport, Utilities)
-* `description`: Short description of the transaction
+- `date`: Date of the transaction  
+- `description`: Short description of the transaction  
+- `category`: Transaction category (e.g., Food, Housing, Transportation)  
+- `amount`: Monetary value of the transaction  
+- `type`: Transaction type (`income` or `expense`)
 
 **Usage by the Agent:**
 
-* Calculate total and average spending
-* Identify top spending categories
-* Detect recurring payments
-* Analyze spending behavior over time
+- Calculate total income
+- Calculate total expenses
+- Compute current balance
+- Aggregate expenses by category
+- Identify highest spending categories
 
----
-
-### 3.2 historico_atendimento.csv
-
-**Description:**
-Stores historical customer service interactions.
-
-**Key Fields:**
-
-* `interaction_id`: Unique interaction identifier
-* `date`: Interaction date
-* `topic`: Subject of the interaction
-* `resolution_status`: Outcome of the interaction
-
-**Usage by the Agent:**
-
-* Provide contextual understanding of past issues
-* Support explanations related to financial services
-
-This dataset is used strictly for contextual reference and does not influence financial calculations.
-
----
-
-### 3.3 perfil_investidor.json
-
-**Description:**
-Contains high-level user profile information.
-
-**Key Fields:**
-
-* `risk_profile`: Conservative, Moderate, or Aggressive
-* `financial_goals`: Stated user objectives
-* `income_range`: Approximate income level
-
-**Usage by the Agent:**
-
-* Adjust explanation depth and tone
-* Provide context-aware insights
-
-The agent does not generate investment recommendations based on this data.
-
----
-
-### 3.4 produtos_financeiros.json
-
-**Description:**
-Reference dataset describing available financial products.
-
-**Key Fields:**
-
-* `product_name`
-* `product_type`
-* `description`
-
-**Usage by the Agent:**
-
-* Answer high-level informational questions
-* Explain product characteristics when requested
-
-This dataset is informational only.
+The dataset is static and fully contained within the project repository.
 
 ---
 
 ## 4. Data Access Rules
 
-* The agent must not infer missing values
-* The agent must not fabricate transactions or categories
-* If requested data is unavailable, the agent must explicitly state the limitation
+- The agent must not infer or fabricate missing data
+- The agent must not generate transactions or categories not present in the dataset
+- All numerical results must be directly traceable to the dataset
+- If requested information is unavailable, the agent must explicitly state the limitation
 
 ---
 
@@ -118,16 +61,19 @@ This dataset is informational only.
 
 The agent will refuse or safely redirect questions related to:
 
-* Investment performance predictions
-* Credit approval or scoring
-* Legal or tax advice
-* Financial guarantees
+- Investment performance or recommendations
+- Credit approval or scoring
+- Financial forecasting or predictions
+- Legal, tax, or accounting advice
 
 ---
 
-## 6. Data Update Assumptions
+## 6. Data Assumptions
 
-The datasets are considered static for the scope of this project. No real-time updates or external integrations are assumed.
+- All transactions are fictional
+- All monetary values are positive
+- Balance is calculated as total income minus total expenses
+- Categories are used solely for descriptive aggregation
 
 ---
 
@@ -135,10 +81,11 @@ The datasets are considered static for the scope of this project. No real-time u
 
 The knowledge base is considered effective if:
 
-* All answers can be traced back to a specific dataset
-* The agent clearly communicates data limitations
-* Insights remain consistent and reproducible
+- Every answer can be traced back to `transactions.csv`
+- The agent clearly communicates data limitations
+- Insights remain consistent, explainable, and reproducible
 
 ---
 
 *Document version: 1.0*
+
