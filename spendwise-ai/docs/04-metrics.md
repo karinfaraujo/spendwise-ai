@@ -2,18 +2,19 @@
 
 ## 1. Overview
 
-This document defines the evaluation criteria and metrics used to assess the performance, reliability, and usefulness of **SpendWise AI**. The evaluation focuses on accuracy, transparency, and user value rather than predictive performance.
+This document defines the evaluation criteria and metrics used to assess the performance, reliability, and usefulness of **SpendWise AI**.  
+The evaluation focuses on **accuracy, transparency, and user value**, rather than predictive performance or financial forecasting.
 
 ---
 
 ## 2. Evaluation Objectives
 
-The primary objectives of the evaluation process are:
+The primary objectives of the evaluation process are to:
 
-* Ensure responses are grounded in available data
-* Minimize hallucinations and unsupported assumptions
-* Measure clarity and usefulness of insights
-* Validate adherence to defined agent scope
+- Ensure all responses are grounded in available data
+- Minimize hallucinations and unsupported assumptions
+- Measure clarity and usefulness of generated insights
+- Validate adherence to the defined agent scope
 
 ---
 
@@ -21,86 +22,88 @@ The primary objectives of the evaluation process are:
 
 ### 3.1 Data Accuracy
 
-**Definition:**
-Measures whether the agent’s responses correctly reflect the underlying datasets.
+**Definition:**  
+Measures whether the agent’s responses correctly reflect the underlying dataset.
 
 **Evaluation Method:**
 
-* Manual verification of responses against source data
-* Spot checks on category totals and summaries
+- Manual verification of responses against `transactions.csv`
+- Spot checks on totals, category aggregations, and balance calculations
 
 **Success Criteria:**
 
-* No fabricated values
-* Consistent results for repeated queries
+- No fabricated values
+- Consistent results for repeated queries using the same data
 
 ---
 
 ### 3.2 Hallucination Rate
 
-**Definition:**
-Frequency of responses containing unsupported or fabricated information.
+**Definition:**  
+Frequency of responses containing unsupported, inferred, or fabricated information.
 
 **Evaluation Method:**
 
-* Review responses to out-of-scope or incomplete-data questions
-* Track how often the agent clearly states limitations
+- Review responses to out-of-scope questions
+- Test prompts with incomplete or missing data
+- Observe whether limitations are clearly stated
 
 **Success Criteria:**
 
-* Hallucination rate close to zero
-* Explicit refusal or redirection when data is unavailable
+- Hallucination rate close to zero
+- Explicit refusal or redirection when data is unavailable
 
 ---
 
 ### 3.3 Response Clarity
 
-**Definition:**
+**Definition:**  
 Measures how easily users can understand the agent’s explanations.
 
 **Evaluation Method:**
 
-* Qualitative review of response structure
-* User feedback (if available)
+- Qualitative review of response structure
+- Assessment of language simplicity and logical flow
+- User feedback (if available)
 
 **Success Criteria:**
 
-* Clear summaries
-* Simple language
-* Logical flow of explanation
+- Clear summaries
+- Simple, non-technical language
+- Logical and well-structured explanations
 
 ---
 
 ### 3.4 Scope Compliance
 
-**Definition:**
+**Definition:**  
 Ensures the agent does not exceed its defined responsibilities.
 
 **Evaluation Method:**
 
-* Test prompts related to investments, credit, or predictions
-* Observe refusal or safe redirection behavior
+- Test prompts related to investments, credit decisions, or predictions
+- Observe refusal or safe redirection behavior
 
 **Success Criteria:**
 
-* 100% compliance with scope limitations
+- 100% compliance with defined scope limitations
 
 ---
 
 ### 3.5 User Value
 
-**Definition:**
-Assesses whether the agent provides meaningful and actionable insights.
+**Definition:**  
+Assesses whether the agent provides meaningful and relevant insights.
 
 **Evaluation Method:**
 
-* Review if insights highlight patterns or trends
-* Check if responses help users better understand spending behavior
+- Review whether insights highlight spending patterns or category trends
+- Evaluate whether responses help users better understand income, expenses, and balance
 
 **Success Criteria:**
 
-* Insights are relevant and data-driven
-* No generic or vague answers
+- Insights are data-driven and relevant
+- No generic, vague, or misleading answers
 
 ---
 
@@ -108,10 +111,11 @@ Assesses whether the agent provides meaningful and actionable insights.
 
 The agent is evaluated using predefined scenarios, including:
 
-* Summary of total spending by category
-* Identification of recurring transactions
-* Questions with missing or insufficient data
-* Out-of-scope financial advice requests
+- Summary of total income and expenses
+- Expense breakdown by category
+- Identification of recurring or frequent transactions
+- Questions with missing or insufficient data
+- Out-of-scope financial advice requests
 
 ---
 
@@ -119,17 +123,17 @@ The agent is evaluated using predefined scenarios, including:
 
 Evaluation is performed:
 
-* During initial development
-* After prompt updates
-* After any changes to data structure
+- During initial development
+- After prompt or logic updates
+- After any changes to the data structure
 
 ---
 
 ## 6. Limitations of Evaluation
 
-* Metrics are primarily qualitative
-* No automated benchmarking is applied
-* Evaluation is based on static datasets
+- Metrics are primarily qualitative
+- No automated benchmarking or scoring system is applied
+- Evaluation is based on static, mock datasets
 
 ---
 
@@ -137,9 +141,9 @@ Evaluation is performed:
 
 SpendWise AI is considered successful if it:
 
-* Provides accurate, data-backed insights
-* Communicates limitations transparently
-* Maintains consistent and safe behavior
+- Provides accurate and data-backed insights
+- Communicates data limitations transparently
+- Maintains consistent, safe, and explainable behavior
 
 ---
 
